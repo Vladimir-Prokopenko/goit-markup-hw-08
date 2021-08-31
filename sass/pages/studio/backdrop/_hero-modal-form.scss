@@ -1,0 +1,55 @@
+/* Стили формы модального окна героя*/
+
+.modal-form__title {
+  margin-bottom: 12px;
+  @include font-source(700, 20px, 1.15, 0.03em, var(--header-color));
+
+  text-align: center;
+}
+
+.modal-comment__label {
+  display: inline-flex;
+  margin-bottom: 4px;
+  @include font-source(400, 12px, 1.166, 0.01em, var(--text-color));
+}
+
+.modal-field {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-field__input {
+  margin: 0px;
+  padding: 11px 12px 11px 42px;
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: border var(--time-function) var(--timing-function),
+    box-shadow var(--time-function) var(--timing-function);
+
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &:focus {
+    border: 1px solid var(--accent-color);
+    outline: none;
+  }
+}
+
+.modal-field__svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: currentColor;
+
+  transition: color var(--time-function) var(--timing-function);
+}
+
+.modal-field__input:focus + .modal-field__svg {
+  color: var(--accent-color);
+}

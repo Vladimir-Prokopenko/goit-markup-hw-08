@@ -1,0 +1,24 @@
+/* Стили кнопки модального окна героя*/
+
+.modal-button {
+  display: block;
+  @include size(200px, 50px);
+  @include centerAuto();
+  padding: 0;
+  border: 0;
+  @include font-source(700, 16px, 1.87, 0.06em, var(--prime-color));
+
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: color var(--time-function) var(--timing-function),
+    background-color var(--time-function) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--header-color);
+    background-color: var(--secondary-background);
+  }
+}

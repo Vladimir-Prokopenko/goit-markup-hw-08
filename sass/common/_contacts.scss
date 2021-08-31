@@ -1,0 +1,27 @@
+/* Стили контакты */
+.contacts__list {
+  @include centeredFlex();
+}
+
+.contacts__item:not(:first-child) {
+  margin-left: var(--gap-header);
+}
+
+.contacts__link {
+  @include centeredFlex();
+  @include indentation(32px, null);
+
+  @include font-source(500, 14px, 1.14, 0.02em, var(--text-color));
+
+  transition: color var(--time-function) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.contacts__svg {
+  margin-right: var(--gap-title);
+  fill: currentColor;
+}

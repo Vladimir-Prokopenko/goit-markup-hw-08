@@ -1,0 +1,21 @@
+/* Стили фона модального окна*/
+
+.backdrop-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include size(100vw, 100vh);
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity var(--time-function) var(--timing-function);
+}
+
+.backdrop-hero.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop-hero.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}

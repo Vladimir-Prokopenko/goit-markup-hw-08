@@ -1,0 +1,16 @@
+/* Стили логотипа подвала */
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+
+  font-family: 'Raleway', sans-serif;
+  @include font-source(700, 26px, 1.19, 0.03em, var(--prime-color));
+
+  transition: color var(--time-function) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

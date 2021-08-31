@@ -1,0 +1,99 @@
+/* Стили комментария модального окна героя*/
+
+.modal-comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.modal-comment__textarea::placeholder {
+  @include font-source(400, 14px, 1.142, 0.01em, rgba(117, 117, 117, 0.5));
+}
+
+.modal-comment__textarea {
+  @include indentation(12px, 16px);
+  height: 120px;
+  resize: none;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border var(--time-function) var(--timing-function),
+    box-shadow var(--time-function) var(--timing-function);
+
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &:focus {
+    border: 1px solid var(--accent-color);
+    outline: none;
+  }
+}
+
+.choice-label {
+  @include centeredFlex();
+  margin-bottom: 30px;
+  @include font-source(400, 14px, 1.71, 0.03em, var(--text-color));
+  cursor: pointer;
+
+  transition: text-shadow var(--time-function) var(--timing-function);
+
+  &:hover {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.choice-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:hover + .choice-svg {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &:focus + .choice-svg {
+    outline: 2px solid var(--accent-color);
+  }
+
+  &:checked + .choice-svg .choice-use {
+    display: block;
+  }
+
+  &:checked + .choice-svg {
+    border: none;
+  }
+}
+
+.choice-svg {
+  margin-right: 8px;
+  border: 2px solid var(--header-color);
+  border-radius: 2px;
+
+  transition: border var(--time-function) var(--timing-function),
+    box-shadow var(--time-function) var(--timing-function);
+}
+
+.choice-use {
+  display: none;
+}
+
+.choice-link {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+
+  &:focus {
+    outline: 2px solid var(--accent-color);
+  }
+}

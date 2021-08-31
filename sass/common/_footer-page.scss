@@ -1,0 +1,11 @@
+/* Стили подвала */
+.footer-page {
+  @include indentation(var(--gap-footer), null);
+
+  background-color: var(--prime-background);
+}
+
+.footer-page__flex {
+  display: flex;
+  align-items: baseline;
+}

@@ -1,0 +1,42 @@
+/* Стили модального окна героя*/
+
+.backdrop-hero__modal {
+  position: absolute;
+  padding: 40px;
+  max-width: 528px;
+  max-height: 100vh;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  overflow-y: auto;
+
+  border-radius: 4px;
+  background-color: var(--prime-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--time-function) var(--timing-function);
+}
+
+.backdrop-hero__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  @include centeredFlex();
+  @include size(30px);
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--prime-color);
+  cursor: pointer;
+
+  transition: color var(--time-function) var(--timing-function),
+    fill var(--time-function) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    fill: currentColor;
+  }
+}

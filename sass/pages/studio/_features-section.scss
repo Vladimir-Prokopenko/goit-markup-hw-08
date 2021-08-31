@@ -1,0 +1,38 @@
+/* Секция особенности */
+.features-section {
+  @include indentation(var(--gap-section), null);
+}
+
+.features__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features__item {
+  width: 270px;
+  height: 100%;
+}
+
+.features__thumb {
+  @include centeredFlex();
+  height: 120px;
+  margin-bottom: var(--gap-item);
+
+  background-color: var(--secondary-background);
+  border-radius: 4px;
+}
+
+.features__title {
+  margin-bottom: var(--gap-title);
+
+  @include font-source(700, 14px, 1.14, 0.03em, var(--header-color));
+  text-transform: uppercase;
+}
+
+.features__text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--text-color);
+}

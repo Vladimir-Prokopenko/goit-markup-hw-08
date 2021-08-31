@@ -1,0 +1,8 @@
+/* Стили шапки */
+.page-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.page-header__flex {
+  @include centeredFlex($content: space-between);
+}

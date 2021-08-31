@@ -1,0 +1,41 @@
+/* Стили навигации */
+.nav,
+.nav__list {
+  @include centeredFlex();
+}
+
+.nav__item:not(:first-child) {
+  margin-left: var(--gap-header);
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  @include indentation(32px, null);
+
+  @include font-source(500, 14px, 1.14, 0.02em, var(--header-color));
+
+  transition: color var(--time-function) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.nav__link--current {
+  color: var(--accent-color);
+
+  &::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: var(--accent-color);
+  }
+}

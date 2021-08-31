@@ -1,0 +1,17 @@
+/* Результирующий файл стилей */
+@import './utils/variables';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './base/base';
+@import './common/page-header';
+@import './common/logo';
+@import './common/nav';
+@import './common/contacts';
+@import './pages/studio/studio';
+@import './pages/portfolio/portfolio';
+@import './pages/contacts/contacts';
+@import './common/footer-page';
+@import './common/footer-logo';
+@import './common/footer-contacts';
+@import './common/footer-social';
+@import './common/footer-form';

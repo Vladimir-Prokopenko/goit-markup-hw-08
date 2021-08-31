@@ -1,0 +1,64 @@
+/* Стили формы подвала */
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  width: 570px;
+}
+
+.footer-form-group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-form__text {
+  margin-bottom: 20px;
+  @include font-source(700, 14px, 1.142, 0.03em, var(--prime-color));
+  text-transform: uppercase;
+}
+
+.footer-form-group__input {
+  margin: 0;
+  @include indentation(15px, 16px);
+  width: calc(100% - 212px);
+  color: var(--prime-color);
+  background-color: var(--prime-background);
+
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.footer-form-group__input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form-group__button {
+  @include centeredFlex();
+  @include size(200px, 50px);
+  margin-left: 12px;
+
+  font-family: inherit;
+  @include font-source(700, 16px, 1.87, 0.06em, var(--prime-color));
+
+  background-color: var(--accent-color);
+  border: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: color var(--time-function) var(--timing-function),
+    background-color var(--time-function) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--header-color);
+    background-color: var(--secondary-background);
+  }
+}
+
+.footer-form-group__svg {
+  margin-left: var(--gap-title);
+  fill: currentColor;
+}
