@@ -72,30 +72,23 @@ a {
 }
 
 .container {
+  min-width: 320px;
+  max-width: 480px;
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-    background-color: aqua;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
-    background-color: yellow;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
-    background-color: blue;
+    max-width: 1200px;
   }
 }
 
@@ -128,7 +121,7 @@ input:-webkit-autofill:active {
   border-bottom: 1px solid var(--border-color);
 }
 
-.page-header__flex {
+.main-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,6 +131,12 @@ input:-webkit-autofill:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .main-menu {
+    display: none;
+  }
 }
 
 /* Стили логотипа */
@@ -1081,6 +1080,82 @@ input:-webkit-autofill:active {
   letter-spacing: 0.06em;
   color: var(--header-color);
   text-transform: uppercase;
+}
+
+/* Стили шапки мобильного меню */
+.header-mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .header-mobile-menu {
+    display: none;
+  }
+}
+
+.header-mobile-menu__logo {
+  padding-top: 16px;
+  padding-bottom: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.174;
+  letter-spacing: 0.03em;
+  color: var(--logo-color);
+  -webkit-transition: text-shadow var(--time-function) var(--timing-function), color var(--time-function) var(--timing-function);
+  transition: text-shadow var(--time-function) var(--timing-function), color var(--time-function) var(--timing-function);
+}
+
+.header-mobile-menu__logo:hover, .header-mobile-menu__logo:focus {
+  color: var(--accent-color);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.menu-toggle {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 0;
+  color: var(--logo-color);
+  background-color: var(--prime-color);
+  fill: currentColor;
+  cursor: pointer;
+  -webkit-transition: color var(--time-function) var(--timing-function);
+  transition: color var(--time-function) var(--timing-function);
+}
+
+.menu-toggle:hover, .menu-toggle:focus {
+  color: var(--accent-color);
+}
+
+.menu-toggle__svg {
+  display: block;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform var(--time-function) var(--timing-function);
+  transition: -webkit-transform var(--time-function) var(--timing-function);
+  transition: transform var(--time-function) var(--timing-function);
+  transition: transform var(--time-function) var(--timing-function), -webkit-transform var(--time-function) var(--timing-function);
+}
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 /* Стили подвала */

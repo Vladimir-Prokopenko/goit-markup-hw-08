@@ -3,6 +3,10 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-.page-header__flex {
+.main-menu {
   @include centeredFlex($content: space-between);
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 }

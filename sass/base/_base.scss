@@ -34,22 +34,17 @@ a {
 }
 
 .container {
+  min-width: 320px;
+  max-width: 480px;
   @include indentation(null, 15px);
   @include centerAuto();
 
-  @media screen and (min-width: $mobile) {
-    width: $mobile;
-    background-color: aqua;
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
   }
 
-  @media screen and (min-width: $tablet) {
-    width: $tablet;
-    background-color: yellow;
-  }
-
-  @media screen and (min-width: $desktop) {
-    width: $desktop;
-    background-color: blue;
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
   }
 }
 
