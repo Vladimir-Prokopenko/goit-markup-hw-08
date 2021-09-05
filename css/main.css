@@ -1227,6 +1227,10 @@ input:-webkit-autofill:active {
   color: var(--accent-color);
 }
 
+.mobile-menu-nav__link--current {
+  color: var(--accent-color);
+}
+
 .mobile-menu-tel__link {
   font-weight: 500;
   font-size: 34px;
@@ -1411,6 +1415,7 @@ input:-webkit-autofill:active {
 }
 
 .footer-form-group__input {
+  max-width: 450px;
   width: 100%;
   margin: 0 0 20px 0;
   padding-top: 15px;

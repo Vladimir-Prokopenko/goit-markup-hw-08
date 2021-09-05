@@ -93,6 +93,10 @@
   }
 }
 
+.mobile-menu-nav__link--current {
+  color: var(--accent-color);
+}
+
 .mobile-menu-tel__link {
   @include font-source(500, 34px, 1.172, 0.02em, var(--text-color));
   transition: color var(--time-function) var(--timing-function);
