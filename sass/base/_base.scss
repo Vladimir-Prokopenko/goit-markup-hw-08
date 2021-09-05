@@ -30,22 +30,8 @@ li {
 }
 
 a {
+  display: block;
   text-decoration: none;
-}
-
-.container {
-  min-width: 320px;
-  max-width: 480px;
-  @include indentation(null, 15px);
-  @include centerAuto();
-
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-width: 1200px;
-  }
 }
 
 .visually-hidden {
@@ -60,6 +46,10 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.accent {
+  color: var(--accent-color);
 }
 
 /* стили для коррекции фона формы при автозаполнени */

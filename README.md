@@ -40,4 +40,6 @@ footer: justify-content: space-between;
   @include centeredFlex(content: space-between);
 }
 
+
+flex-grow: 1;
 -->

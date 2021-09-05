@@ -93,9 +93,9 @@
         <div class="container">
           <h1 class="visually-hidden">Страница контакты</h1>
 
-          <!-- <h2 class="contacts-section__title">
+          <h2 class="contacts-section__title">
             Страница находится в стадии разработки
-          </h2> -->
+          </h2>
         </div>
       </section>
     </main>
@@ -196,28 +196,58 @@
       </button>
 
       <div class="mobile-menu">
-        <ul>
-          <li><a href="" class="link">Студия</a></li>
-          <li><a href="" class="link">Портфолио</a></li>
-          <li><a href="" class="link">Контакты</a></li>
+        <ul class="mobile-menu-nav">
+          <li class="mobile-menu-nav__item">
+            <a href="./index.html" class="mobile-menu-nav__link">Студия</a>
+          </li>
+          <li class="mobile-menu-nav__item">
+            <a href="./portfolio.html" class="mobile-menu-nav__link"
+              >Портфолио</a
+            >
+          </li>
+          <li class="mobile-menu-nav__item">
+            <a href="./contacts.html" class="mobile-menu-nav__link">Контакты</a>
+          </li>
         </ul>
 
         <div>
-          <ul>
-            <li><a href="" class="link">+38 096 111 11 11</a></li>
-            <li><a href="" class="link">info@devstudio.com</a></li>
-          </ul>
+          <a
+            href="tel:+380961111111"
+            class="mobile-menu-tel__link"
+            aria-label="Телефон"
+            >+38 096 111 11 11
+          </a>
+          <a
+            href="mailto:info@devstudio.com"
+            class="mobile-menu-mail__link"
+            aria-label="Почта"
+            >info@devstudio.com</a
+          >
 
-          <ul>
-            <li><a href="" class="link">Instagram</a></li>
-            <li><a href="" class="link">Twitter</a></li>
-            <li><a href="" class="link">Facebook</a></li>
-            <li><a href="" class="link">LinkedIn</a></li>
+          <ul class="mobile-menu-soclist">
+            <li class="mobile-menu-soclist__item">
+              <a href="#" class="mobile-menu-soclist__link">Instagram</a>
+            </li>
+            <li class="mobile-menu-soclist__item">
+              <a href="#" class="mobile-menu-soclist__link">Twitter</a>
+            </li>
+            <li class="mobile-menu-soclist__item">
+              <a href="#" class="mobile-menu-soclist__link">Facebook</a>
+            </li>
+            <li class="mobile-menu-soclist__item">
+              <a href="#" class="mobile-menu-soclist__link">LinkedIn</a>
+            </li>
           </ul>
         </div>
       </div>
     </div>
 
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="js/mobile-menu.js"></script>
   </body>
 </html>

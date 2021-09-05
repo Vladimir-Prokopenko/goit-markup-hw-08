@@ -2,9 +2,9 @@
 .contacts-section {
   @include indentation(var(--gap-section), null);
 
-  &__title {
-    margin-bottom: var(--gap-item);
-    @include font-source(900, 44px, 1.36, 0.06em, var(--header-color));
-    text-transform: uppercase;
-  }
+  // &__title {
+  //   margin-bottom: var(--gap-item);
+  //   @include font-source(900, 44px, 1.36, 0.06em, var(--header-color));
+  //   text-transform: uppercase;
+  // }
 }
