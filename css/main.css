@@ -1083,6 +1083,32 @@ input:-webkit-autofill:active {
 }
 
 /* Стили шапки мобильного меню */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-right: 40px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  background-color: var(--prime-color);
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform var(--time-function) var(--timing-function);
+  transition: -webkit-transform var(--time-function) var(--timing-function);
+  transition: transform var(--time-function) var(--timing-function);
+  transition: transform var(--time-function) var(--timing-function), -webkit-transform var(--time-function) var(--timing-function);
+}
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 .header-mobile-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1135,27 +1161,14 @@ input:-webkit-autofill:active {
   color: var(--accent-color);
 }
 
-.menu-toggle__svg {
+.mobile-menu-burger {
   display: block;
 }
 
-.menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: -webkit-transform var(--time-function) var(--timing-function);
-  transition: -webkit-transform var(--time-function) var(--timing-function);
-  transition: transform var(--time-function) var(--timing-function);
-  transition: transform var(--time-function) var(--timing-function), -webkit-transform var(--time-function) var(--timing-function);
-}
-
-.menu-container.is-open {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.mobile-menu-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
 /* Стили подвала */
