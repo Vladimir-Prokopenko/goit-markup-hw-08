@@ -1,15 +1,11 @@
 /* Стили формы подвала */
 
 .footer-form {
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  width: 570px;
-}
-
-.footer-form-group {
-  display: flex;
-  justify-content: flex-end;
+  text-align: center;
+  // display: flex;
+  // flex-direction: column;
+  // margin-left: auto;
+  // width: 570px;
 }
 
 .footer-form__text {
@@ -18,12 +14,18 @@
   text-transform: uppercase;
 }
 
+.footer-form-group {
+  // display: flex;
+  // justify-content: flex-end;
+}
+
 .footer-form-group__input {
-  margin: 0;
+  width: 100%;
+  margin: 0 0 20px 0;
   @include indentation(15px, 16px);
-  width: calc(100% - 212px);
   color: var(--prime-color);
   background-color: var(--prime-background);
+  // width: calc(100% - 212px);
 
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -35,9 +37,11 @@
 }
 
 .footer-form-group__button {
+  margin-left: auto;
+  margin-right: auto;
   @include centeredFlex();
   @include size(200px, 50px);
-  margin-left: 12px;
+  // margin-left: 12px;
 
   font-family: inherit;
   @include font-source(700, 16px, 1.87, 0.06em, var(--prime-color));

@@ -5,7 +5,7 @@
   margin-bottom: 20px;
 
   font-family: 'Raleway', sans-serif;
-  @include font-source(700, 26px, 1.19, 0.03em, var(--prime-color));
+  @include font-source(700, 24px, 1.174, 0.03em, var(--prime-color));
 
   transition: color var(--time-function) var(--timing-function);
 
