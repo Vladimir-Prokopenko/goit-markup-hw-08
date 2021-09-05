@@ -1,28 +1,48 @@
 /* Секция клиенты */
 .clients-section {
-  @include indentation(94px, null);
+  @include indentation(60px, null);
+  // @include indentation(94px, null);
   background-color: var(--prime-color);
 }
 
 .clients-title {
-  margin-bottom: var(--gap-header);
+  margin-bottom: 30px;
+  // margin-bottom: var(--gap-header);
 
-  @include font-source(700, 36px, 1.17, 0.03em, var(--header-color));
+  @include font-source(700, 28px, 1.178, 0.03em, var(--header-color));
+  // @include font-source(700, 36px, 1.17, 0.03em, var(--header-color));
   text-align: center;
 }
 
 .clients__list {
-  display: flex;
-  flex-wrap: wrap;
+  @media (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
 }
 
 .clients__item {
-  @include size(170px, 92px);
+  height: 106px;
+
+  @media (min-width: 480px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  // @include size(170px, 92px);
 }
 
-.clients__item:not(:first-child) {
-  margin-left: var(--gap-item);
+.clients__item:not(:last-child) {
+  @media (max-width: 480px) {
+    margin-bottom: 30px;
+  }
 }
+
+// .clients__item:not(:first-child) {
+//   margin-left: var(--gap-item);
+// }
 
 .clients__link {
   @include centeredFlex();

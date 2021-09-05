@@ -34,7 +34,8 @@
 .choice-label {
   @include centeredFlex();
   margin-bottom: 30px;
-  @include font-source(400, 14px, 1.71, 0.03em, var(--text-color));
+  @include font-source(400, 12px, 1.166, 0.03em, var(--text-color));
+  // @include font-source(400, 14px, 1.71, 0.03em, var(--text-color));
   cursor: pointer;
 
   transition: text-shadow var(--time-function) var(--timing-function);

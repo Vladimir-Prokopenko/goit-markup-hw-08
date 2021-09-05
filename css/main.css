@@ -395,7 +395,7 @@ input:-webkit-autofill:active {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--header-color);
   text-align: center;
@@ -537,8 +537,8 @@ input:-webkit-autofill:active {
           justify-content: center;
   margin-bottom: 30px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.166;
   letter-spacing: 0.03em;
   color: var(--text-color);
   cursor: pointer;
@@ -855,36 +855,50 @@ input:-webkit-autofill:active {
 
 /* Секция клиенты */
 .clients-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--prime-color);
 }
 
 .clients-title {
-  margin-bottom: var(--gap-header);
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.178;
   letter-spacing: 0.03em;
   color: var(--header-color);
   text-align: center;
 }
 
-.clients__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media (min-width: 480px) {
+  .clients__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
 }
 
 .clients__item {
-  width: 170px;
-  height: 92px;
+  height: 106px;
 }
 
-.clients__item:not(:first-child) {
-  margin-left: var(--gap-item);
+@media (min-width: 480px) {
+  .clients__item {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .clients__link {

@@ -2,7 +2,8 @@
 
 .modal-form__title {
   margin-bottom: 12px;
-  @include font-source(700, 20px, 1.15, 0.03em, var(--header-color));
+  @include font-source(700, 20px, 1.5, 0.03em, var(--header-color));
+  // @include font-source(700, 20px, 1.15, 0.03em, var(--header-color));
 
   text-align: center;
 }
