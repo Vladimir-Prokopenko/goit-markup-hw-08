@@ -258,11 +258,17 @@ input:-webkit-autofill:active {
 /* Страница Студия */
 /* Секция герой */
 .hero-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  height: 400px;
   text-align: center;
   background-color: var(--prime-background);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background-hero.jpg);
@@ -273,16 +279,14 @@ input:-webkit-autofill:active {
 }
 
 .hero-content {
-  width: 696px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 360px;
 }
 
 .hero-content__title {
   margin-bottom: var(--gap-item);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.615;
   letter-spacing: 0.06em;
   color: var(--prime-color);
   text-transform: uppercase;
@@ -632,21 +636,12 @@ input:-webkit-autofill:active {
 
 /* Секция особенности */
 .features-section {
-  padding-top: var(--gap-section);
-  padding-bottom: var(--gap-section);
-}
-
-.features__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .features__item {
-  width: 270px;
+  width: 100%;
   height: 100%;
 }
 
@@ -670,7 +665,7 @@ input:-webkit-autofill:active {
   margin-bottom: var(--gap-title);
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.142;
   letter-spacing: 0.03em;
   color: var(--header-color);
   text-transform: uppercase;
@@ -678,14 +673,21 @@ input:-webkit-autofill:active {
 
 .features__text {
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.71448;
   letter-spacing: 0.03em;
   color: var(--text-color);
 }
 
 /* Секция о нас */
 .about-section {
+  display: none;
   padding-bottom: var(--gap-section);
+}
+
+@media (min-width: 1200px) {
+  .about-section {
+    display: block;
+  }
 }
 
 .about-title {
@@ -742,25 +744,19 @@ input:-webkit-autofill:active {
 
 /* Секция команда */
 .team-section {
-  padding-top: var(--gap-section);
-  padding-bottom: var(--gap-section);
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--secondary-background);
 }
 
 .team__title {
-  margin-bottom: var(--gap-header);
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.178;
   letter-spacing: 0.03em;
   color: var(--header-color);
   text-align: center;
-}
-
-.team__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .team__item {
@@ -771,15 +767,25 @@ input:-webkit-autofill:active {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.team__item:not(:first-child) {
-  margin-left: var(--gap-item);
+.team-thumb {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 480px) {
+  .team-thumb {
+    max-width: 450px;
+    max-height: 460px;
+  }
+}
+
+.team__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .team-content {
   padding-top: 30px;
-  padding-right: 32px;
-  padding-bottom: 30px;
-  padding-left: 32px;
+  padding-bottom: 24px;
 }
 
 .team-content__title {
@@ -793,7 +799,7 @@ input:-webkit-autofill:active {
 
 .team-content__text {
   margin-bottom: 16px;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.187;
   letter-spacing: 0.03em;
@@ -801,6 +807,9 @@ input:-webkit-autofill:active {
 }
 
 .team-social__list {
+  width: 206px;
+  margin-left: auto;
+  margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

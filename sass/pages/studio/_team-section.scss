@@ -1,20 +1,23 @@
 /* Секция команда */
 
 .team-section {
-  @include indentation(var(--gap-section), null);
+  @include indentation(60px, null);
+  // @include indentation(var(--gap-section), null);
 
   background-color: var(--secondary-background);
 }
 
 .team__title {
-  margin-bottom: var(--gap-header);
+  margin-bottom: 30px;
+  // margin-bottom: var(--gap-header);
 
-  @include font-source(700, 36px, 1.17, 0.03em, var(--header-color));
+  @include font-source(700, 28px, 1.178, 0.03em, var(--header-color));
+  // @include font-source(700, 36px, 1.17, 0.03em, var(--header-color));
   text-align: center;
 }
 
 .team__list {
-  display: flex;
+  // display: flex;
 }
 
 .team__item {
@@ -26,12 +29,27 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.team__item:not(:first-child) {
-  margin-left: var(--gap-item);
+.team-thumb {
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 480px) {
+    max-width: 450px;
+    max-height: 460px;
+  }
 }
 
+.team__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+// .team__item:not(:first-child) {
+//   margin-left: var(--gap-item);
+// }
+
 .team-content {
-  @include indentation(30px, 32px);
+  padding-top: 30px;
+  padding-bottom: 24px;
+  // @include indentation(30px, 32px);
 }
 
 .team-content__title {
@@ -41,10 +59,14 @@
 
 .team-content__text {
   margin-bottom: 16px;
-  @include font-source(500, 16px, 1.187, 0.03em, var(--text-color));
+  @include font-source(400, 16px, 1.187, 0.03em, var(--text-color));
+  // @include font-source(500, 16px, 1.187, 0.03em, var(--text-color));
 }
 
 .team-social__list {
+  width: 206px;
+  margin-left: auto;
+  margin-right: auto;
   @include centeredFlex($content: space-between);
 }
 

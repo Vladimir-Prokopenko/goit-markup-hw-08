@@ -1,5 +1,10 @@
 /* Секция о нас */
 .about-section {
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: block;
+  }
   padding-bottom: var(--gap-section);
 }
 

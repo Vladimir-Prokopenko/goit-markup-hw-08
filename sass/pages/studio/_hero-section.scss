@@ -1,8 +1,12 @@
 /* Секция герой */
 .hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 1600px;
-  @include centerAuto();
-  @include indentation(200px, null);
+  height: 400px;
+  // @include centerAuto();
+  // @include indentation(200px, null);
 
   text-align: center;
   background-color: var(--prime-background);
@@ -16,13 +20,14 @@
 }
 
 .hero-content {
-  width: 696px;
-  @include centerAuto();
+  width: 360px;
+  // width: 696px;
+  // @include centerAuto();
 }
 
 .hero-content__title {
   margin-bottom: var(--gap-item);
-  @include font-source(900, 44px, 1.36, 0.06em, var(--prime-color));
+  @include font-source(900, 26px, 1.615, 0.06em, var(--prime-color));
 
   text-transform: uppercase;
 }
