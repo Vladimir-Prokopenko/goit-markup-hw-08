@@ -271,8 +271,8 @@ input:-webkit-autofill:active {
   height: 400px;
   text-align: center;
   background-color: var(--prime-background);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background-hero.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-hero.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background-hero@1x.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-hero@1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -935,24 +935,23 @@ input:-webkit-autofill:active {
 /* Страница Портфолио */
 /* Стили страницы Портфолио*/
 .portfolio-section {
-  padding-top: var(--gap-section);
-  padding-bottom: var(--gap-section);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .portfolio-filter__list {
+  margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: -15px;
+  margin-left: -8px;
 }
 
-.portfolio-filter__item:not(:first-child) {
+.portfolio-filter__item {
+  margin-top: 15px;
   margin-left: 8px;
 }
 
@@ -1016,8 +1015,7 @@ input:-webkit-autofill:active {
 }
 
 .portfolio__item {
-  -ms-flex-preferred-size: calc(100% / 3 - var(--gap-item));
-      flex-basis: calc(100% / 3 - var(--gap-item));
+  width: 100%;
   margin-top: var(--gap-item);
   margin-left: var(--gap-item);
 }
@@ -1025,6 +1023,14 @@ input:-webkit-autofill:active {
 .article-thumb {
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 480px) {
+  .portfolio-img-thumb {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .portfolio-overlay {

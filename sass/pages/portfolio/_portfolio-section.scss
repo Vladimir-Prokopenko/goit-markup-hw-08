@@ -1,14 +1,22 @@
 /* Стили страницы Портфолио*/
 .portfolio-section {
-  @include indentation(var(--gap-section), null);
+  @include indentation(60px, null);
+  // @include indentation(var(--gap-section), null);
 }
 
 .portfolio-filter__list {
-  @include centeredFlex();
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -15px;
+  margin-left: -8px;
+
+  // @include centeredFlex();
+  // margin-bottom: 50px;
 }
 
-.portfolio-filter__item:not(:first-child) {
+.portfolio-filter__item {
+  margin-top: 15px;
   margin-left: 8px;
 }
 

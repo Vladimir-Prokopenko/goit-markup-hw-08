@@ -26,14 +26,23 @@
 }
 
 .portfolio__item {
-  flex-basis: calc(100% / 3 - var(--gap-item));
+  width: 100%;
   margin-top: var(--gap-item);
   margin-left: var(--gap-item);
+  // flex-basis: calc(100% / 3 - var(--gap-item));
 }
 
 .article-thumb {
   position: relative;
   overflow: hidden;
+}
+
+.portfolio-img-thumb {
+  @media (min-width: 480px) {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .portfolio-overlay {
