@@ -1,7 +1,10 @@
 /* Секция особенности */
 .features-section {
   @include indentation(60px, null);
-  // @include indentation(var(--gap-section), null);
+
+  @media screen and (min-width: 1200px) {
+    @include indentation(var(--gap-section), null);
+  }
 }
 
 .features__list {
@@ -9,8 +12,6 @@
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-
-  // justify-content: space-between;
 }
 
 .features__item {
@@ -20,6 +21,10 @@
 
   @media screen and (min-width: 768px) {
     flex-basis: calc(100% / 2 - 30px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
   }
 }
 

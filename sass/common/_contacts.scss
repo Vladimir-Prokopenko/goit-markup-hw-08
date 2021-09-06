@@ -1,25 +1,37 @@
 /* Стили контакты */
 .contacts__list {
-  // @include centeredFlex();
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex();
+  }
 }
 
 .contacts__item:first-child {
-  padding-top: 21px;
-  padding-bottom: 5px;
+  @media screen and (max-width: 1199px) {
+    padding-top: 21px;
+    padding-bottom: 5px;
+  }
 }
 
 .contacts__item:last-child {
-  padding-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 20px;
+  }
+}
+
+.contacts__item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .contacts__link {
   @include centeredFlex();
-  // @include indentation(32px, null);
-  // @include font-source(500, 14px, 1.14, 0.02em, var(--text-color));
-
   @include font-source(500, 12px, 1.166, 0.02em, var(--text-color));
-
   transition: color var(--time-function) var(--timing-function);
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 31px;
+    @include font-source(500, 14px, 1.14, 0.02em, var(--text-color));
+  }
 
   &:hover,
   &:focus {
@@ -28,7 +40,10 @@
 }
 
 .contacts__svg {
-  // margin-right: var(--gap-title);
   margin-right: 8px;
   fill: currentColor;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: var(--gap-title);
+  }
 }

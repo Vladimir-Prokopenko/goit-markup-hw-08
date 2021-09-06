@@ -120,7 +120,13 @@ input:-webkit-autofill:active {
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
   }
 }
 
@@ -155,6 +161,22 @@ input:-webkit-autofill:active {
   color: var(--logo-color);
   -webkit-transition: text-shadow var(--time-function) var(--timing-function), color var(--time-function) var(--timing-function);
   transition: text-shadow var(--time-function) var(--timing-function), color var(--time-function) var(--timing-function);
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--logo-color);
+  }
 }
 
 .logo:hover, .logo:focus {
@@ -215,13 +237,35 @@ input:-webkit-autofill:active {
 }
 
 /* Стили контакты */
-.contacts__item:first-child {
-  padding-top: 21px;
-  padding-bottom: 5px;
+@media screen and (min-width: 1200px) {
+  .contacts__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
-.contacts__item:last-child {
-  padding-bottom: 20px;
+@media screen and (max-width: 1199px) {
+  .contacts__item:first-child {
+    padding-top: 21px;
+    padding-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .contacts__item:last-child {
+    padding-bottom: 20px;
+  }
+}
+
+.contacts__item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .contacts__link {
@@ -243,6 +287,18 @@ input:-webkit-autofill:active {
   transition: color var(--time-function) var(--timing-function);
 }
 
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    padding-top: 32px;
+    padding-bottom: 31px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+  }
+}
+
 .contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
 }
@@ -250,6 +306,12 @@ input:-webkit-autofill:active {
 .contacts__svg {
   margin-right: 8px;
   fill: currentColor;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__svg {
+    margin-right: var(--gap-title);
+  }
 }
 
 /* Страница Студия */
@@ -275,8 +337,22 @@ input:-webkit-autofill:active {
   background-position: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero-section {
+    height: 600px;
+  }
+}
+
 .hero-content {
   width: 360px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 696px;
+  }
 }
 
 .hero-content__title {
@@ -287,6 +363,16 @@ input:-webkit-autofill:active {
   letter-spacing: 0.06em;
   color: var(--prime-color);
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-content__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.363;
+    letter-spacing: 0.06em;
+    color: var(--prime-color);
+  }
 }
 
 .hero-content__button {
@@ -637,6 +723,13 @@ input:-webkit-autofill:active {
   padding-bottom: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .features-section {
+    padding-top: var(--gap-section);
+    padding-bottom: var(--gap-section);
+  }
+}
+
 .features__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -657,6 +750,13 @@ input:-webkit-autofill:active {
   .features__item {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features__item {
+    -ms-flex-preferred-size: calc(100% / 4 - 30px);
+        flex-basis: calc(100% / 4 - 30px);
   }
 }
 
@@ -765,6 +865,13 @@ input:-webkit-autofill:active {
   background-color: var(--secondary-background);
 }
 
+@media screen and (min-width: 1200px) {
+  .team-section {
+    padding-top: var(--gap-section);
+    padding-bottom: var(--gap-section);
+  }
+}
+
 .team__title {
   margin-bottom: 30px;
   font-weight: 700;
@@ -773,6 +880,22 @@ input:-webkit-autofill:active {
   letter-spacing: 0.03em;
   color: var(--header-color);
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .team__title {
+    margin-bottom: var(--gap-header);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--header-color);
+  }
 }
 
 .team__list {
@@ -803,6 +926,13 @@ input:-webkit-autofill:active {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .team__item {
+    -ms-flex-preferred-size: calc(100% / 4 - 30px);
+        flex-basis: calc(100% / 4 - 30px);
+  }
+}
+
 .team-thumb {
   margin-left: auto;
   margin-right: auto;
@@ -818,6 +948,15 @@ input:-webkit-autofill:active {
 .team-content {
   padding-top: 30px;
   padding-bottom: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team-content {
+    padding-top: 30px;
+    padding-right: 32px;
+    padding-bottom: 30px;
+    padding-left: 32px;
+  }
 }
 
 .team-content__title {
@@ -836,6 +975,16 @@ input:-webkit-autofill:active {
   line-height: 1.187;
   letter-spacing: 0.03em;
   color: var(--text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .team-content__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.187;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+  }
 }
 
 .team-social__list {
@@ -887,9 +1036,16 @@ input:-webkit-autofill:active {
 
 /* Секция клиенты */
 .clients-section {
+  background-color: var(--prime-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: var(--prime-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients-title {
@@ -900,6 +1056,17 @@ input:-webkit-autofill:active {
   letter-spacing: 0.03em;
   color: var(--header-color);
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-title {
+    margin-bottom: var(--gap-header);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--header-color);
+  }
 }
 
 @media (min-width: 480px) {

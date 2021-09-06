@@ -40,6 +40,9 @@ footer: justify-content: space-between;
   @include centeredFlex(content: space-between);
 }
 
+@media screen and (min-width: 1200px) {
+
+    }
 
 flex-grow: 1;
 -->
