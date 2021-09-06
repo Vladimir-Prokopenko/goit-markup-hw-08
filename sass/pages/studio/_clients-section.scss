@@ -24,12 +24,19 @@
 }
 
 .clients__item {
-  height: 106px;
+  @media (max-width: 479px) {
+    height: 106px;
+  }
 
   @media (min-width: 480px) {
+    height: 92px;
     flex-basis: calc(100% / 2 - 30px);
     margin-top: 30px;
     margin-left: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - 30px);
   }
   // @include size(170px, 92px);
 }

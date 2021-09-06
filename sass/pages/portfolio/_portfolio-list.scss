@@ -8,7 +8,9 @@
 }
 
 .portfolio__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   transition: box-shadow var(--time-function) var(--timing-function);
 
@@ -29,7 +31,10 @@
   width: 100%;
   margin-top: var(--gap-item);
   margin-left: var(--gap-item);
-  // flex-basis: calc(100% / 3 - var(--gap-item));
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+  }
 }
 
 .article-thumb {
@@ -39,7 +44,7 @@
 
 .portfolio-img-thumb {
   @media (min-width: 480px) {
-    width: 450px;
+    max-width: 450px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -69,6 +74,7 @@
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+  flex-grow: 1;
 
   &__title {
     @include font-source(700, 18px, 2, 0.06em, var(--header-color));

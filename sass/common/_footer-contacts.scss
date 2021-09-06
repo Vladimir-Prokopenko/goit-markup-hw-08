@@ -4,6 +4,10 @@
   text-align: center;
   margin-bottom: 60px;
   // margin-right: 70px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 165px;
+  }
 }
 
 .footer-address {
@@ -12,8 +16,11 @@
 }
 
 .footer-address__item {
-  margin-bottom: 8px;
   @include font-source(400, 14px, 1.714, 0.03em, var(--prime-color));
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
 
 .footer-contacts__link {

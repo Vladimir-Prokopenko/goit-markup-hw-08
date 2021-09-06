@@ -5,14 +5,22 @@
 }
 
 .features__list {
-  // display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+
   // justify-content: space-between;
 }
 
 .features__item {
   width: 100%;
-  height: 100%;
-  // width: 270px;
+  margin-top: 30px;
+  margin-left: 30px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+  }
 }
 
 .features__thumb {
@@ -29,11 +37,12 @@
 
   @include font-source(700, 14px, 1.142, 0.03em, var(--header-color));
   text-transform: uppercase;
+  text-align: center;
 }
 
 .features__text {
   font-size: 14px;
-  line-height: 1.71448;
+  line-height: 1.714;
   letter-spacing: 0.03em;
 
   color: var(--text-color);

@@ -11,9 +11,10 @@
 .nav__link {
   position: relative;
   display: block;
-  @include indentation(32px, null);
+  padding-top: 32px;
+  padding-bottom: 31px;
 
-  @include font-source(500, 14px, 1.14, 0.02em, var(--header-color));
+  @include font-source(500, 14px, 1.143, 0.02em, var(--header-color));
 
   transition: color var(--time-function) var(--timing-function);
 

@@ -1,17 +1,23 @@
 /* Стили контакты */
 .contacts__list {
-  @include centeredFlex();
+  // @include centeredFlex();
 }
 
-.contacts__item:not(:first-child) {
-  margin-left: var(--gap-header);
+.contacts__item:first-child {
+  padding-top: 21px;
+  padding-bottom: 5px;
+}
+
+.contacts__item:last-child {
+  padding-bottom: 20px;
 }
 
 .contacts__link {
   @include centeredFlex();
-  @include indentation(32px, null);
+  // @include indentation(32px, null);
+  // @include font-source(500, 14px, 1.14, 0.02em, var(--text-color));
 
-  @include font-source(500, 14px, 1.14, 0.02em, var(--text-color));
+  @include font-source(500, 12px, 1.166, 0.02em, var(--text-color));
 
   transition: color var(--time-function) var(--timing-function);
 
@@ -22,6 +28,7 @@
 }
 
 .contacts__svg {
-  margin-right: var(--gap-title);
+  // margin-right: var(--gap-title);
+  margin-right: 8px;
   fill: currentColor;
 }

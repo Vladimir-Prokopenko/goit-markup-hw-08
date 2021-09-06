@@ -1,10 +1,13 @@
 /* Стили логотипа */
 .logo {
-  margin-right: 93px;
-  @include indentation(24px, null);
+  margin-right: 88px;
+  padding-top: 26px;
+  padding-bottom: 25px;
+  // margin-right: 93px;
 
   font-family: 'Raleway', sans-serif;
-  @include font-source(700, 26px, 1.19, 0.03em, var(--logo-color));
+  @include font-source(700, 24px, 1.166, 0.03em, var(--logo-color));
+  // @include font-source(700, 26px, 1.19, 0.03em, var(--logo-color));
 
   transition: text-shadow var(--time-function) var(--timing-function),
     color var(--time-function) var(--timing-function);
