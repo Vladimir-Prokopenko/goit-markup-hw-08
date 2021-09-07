@@ -6,7 +6,7 @@
   // @include indentation(var(--gap-footer), null);
 }
 
-.footer-page__flex {
+.footer-page__group {
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: center;
