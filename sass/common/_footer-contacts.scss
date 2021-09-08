@@ -9,13 +9,21 @@
   }
 
   @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
     margin-right: 70px;
+    text-align: left;
   }
 }
 
 .footer-address {
   text-align: center;
   font-style: normal;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .footer-address__item {
