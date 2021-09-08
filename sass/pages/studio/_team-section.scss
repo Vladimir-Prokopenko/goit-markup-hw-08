@@ -2,6 +2,8 @@
 
 .team-section {
   max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   @include indentation(60px, null);
   background-color: var(--secondary-background);
 

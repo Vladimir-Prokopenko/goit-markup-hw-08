@@ -939,6 +939,8 @@ input:-webkit-autofill:active {
 /* Секция команда */
 .team-section {
   max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--secondary-background);
