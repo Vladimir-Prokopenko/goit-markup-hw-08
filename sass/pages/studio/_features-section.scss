@@ -28,6 +28,12 @@
   }
 }
 
+.features__item:not(:last-child) {
+  @media screen and (max-width: 480px) {
+    margin-bottom: 30px;
+  }
+}
+
 .features__thumb {
   @include centeredFlex();
   height: 120px;

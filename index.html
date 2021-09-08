@@ -63,7 +63,7 @@
             <li class="contacts__item">
               <a
                 href="mailto:info@devstudio.com"
-                class="contacts__link"
+                class="contacts__link contacts__link--mail"
                 aria-label="Почта"
               >
                 <svg class="contacts__svg" width="16" height="16">
@@ -75,7 +75,7 @@
             <li class="contacts__item">
               <a
                 href="tel:+380961111111"
-                class="contacts__link"
+                class="contacts__link contacts__link--tel"
                 aria-label="Телефон"
                 ><svg class="contacts__svg" width="16" height="16">
                   <use href="./images/icons.svg#icon-smartphone"></use>
@@ -528,7 +528,7 @@
 
     <!-- Подвал Студия -->
     <footer class="footer-page">
-      <div class="container">
+      <div class="container footer-page-flex">
         <div class="footer-page__group">
           <div class="footer-contacts">
             <a href="./index.html" lang="en" class="footer__logo"
@@ -724,35 +724,40 @@
           </li>
         </ul>
 
-        <div>
-          <a
-            href="tel:+380961111111"
-            class="mobile-menu-tel__link"
-            aria-label="Телефон"
-            >+38 096 111 11 11
-          </a>
-          <a
-            href="mailto:info@devstudio.com"
-            class="mobile-menu-mail__link"
-            aria-label="Почта"
-            >info@devstudio.com</a
-          >
+        <ul class="mobile-contacts__list">
+          <li class="mobile-contacts__item">
+            <a
+              href="tel:+380961111111"
+              class="mobile-contacts__tel"
+              aria-label="Телефон"
+              >+38 096 111 11 11
+            </a>
+          </li>
 
-          <ul class="mobile-menu-soclist">
-            <li class="mobile-menu-soclist__item">
-              <a href="#" class="mobile-menu-soclist__link">Instagram</a>
-            </li>
-            <li class="mobile-menu-soclist__item">
-              <a href="#" class="mobile-menu-soclist__link">Twitter</a>
-            </li>
-            <li class="mobile-menu-soclist__item">
-              <a href="#" class="mobile-menu-soclist__link">Facebook</a>
-            </li>
-            <li class="mobile-menu-soclist__item">
-              <a href="#" class="mobile-menu-soclist__link">LinkedIn</a>
-            </li>
-          </ul>
-        </div>
+          <li class="mobile-contacts__item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="mobile-contacts__mail"
+              aria-label="Почта"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-menu-soclist">
+          <li class="mobile-menu-soclist__item">
+            <a href="#" class="mobile-menu-soclist__link">Instagram</a>
+          </li>
+          <li class="mobile-menu-soclist__item">
+            <a href="#" class="mobile-menu-soclist__link">Twitter</a>
+          </li>
+          <li class="mobile-menu-soclist__item">
+            <a href="#" class="mobile-menu-soclist__link">Facebook</a>
+          </li>
+          <li class="mobile-menu-soclist__item">
+            <a href="#" class="mobile-menu-soclist__link">LinkedIn</a>
+          </li>
+        </ul>
       </div>
     </div>
 

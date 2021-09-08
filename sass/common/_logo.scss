@@ -4,14 +4,11 @@
   padding-top: 26px;
   padding-bottom: 25px;
 
-  @media screen and (min-width: 1200px) {
-    margin-right: 93px;
-  }
-
   font-family: 'Raleway', sans-serif;
   @include font-source(700, 24px, 1.166, 0.03em, var(--logo-color));
 
   @media screen and (min-width: 1200px) {
+    margin-right: 93px;
     @include font-source(700, 26px, 1.19, 0.03em, var(--logo-color));
   }
 

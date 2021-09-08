@@ -3,9 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   max-width: 1600px;
   height: 400px;
-  text-align: center;
   background-color: var(--prime-background);
   background-image: linear-gradient(
       to right,
@@ -14,6 +16,18 @@
     ),
     url(../images/background-hero@1x.jpg);
   @include cover-background();
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/background-hero@2x.jpg);
+    @include cover-background();
+  }
 
   @media screen and (min-width: 1200px) {
     height: 600px;

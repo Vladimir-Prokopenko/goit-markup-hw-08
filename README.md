@@ -45,4 +45,10 @@ footer: justify-content: space-between;
     }
 
 flex-grow: 1;
+
+white-space:nowrap;
+
+overflow: auto;
+
+  outline: 2px tomato solid;
 -->

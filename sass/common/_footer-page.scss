@@ -1,16 +1,28 @@
 /* Стили подвала */
 .footer-page {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   @include indentation(60px, null);
   background-color: var(--prime-background);
+}
 
-  // @include indentation(var(--gap-footer), null);
+.footer-page-flex {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 
 .footer-page__group {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
-  //   align-items: baseline;
 }

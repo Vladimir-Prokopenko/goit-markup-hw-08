@@ -1,7 +1,8 @@
 /* Стили шапки мобильного меню */
 
 .header-mobile-menu {
-  @include centeredFlex($content: space-between);
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: 768px) {
     display: none;
@@ -49,7 +50,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  min-width: 100vw;
   height: 100vh;
   @include indentation(48px, 40px);
 
@@ -75,7 +76,6 @@
 .mobile-menu {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
 }
 
@@ -97,13 +97,25 @@
   color: var(--accent-color);
 }
 
-.mobile-menu-tel__link {
-  @include font-source(500, 24px, 1.172, 0.02em, var(--text-color));
-  transition: color var(--time-function) var(--timing-function);
+.mobile-contacts__list {
+  margin-top: auto;
+  margin-bottom: 64px;
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 30px;
+  }
+}
+
+.mobile-contacts__item:not(:last-child) {
   margin-bottom: 32px;
+}
+
+.mobile-contacts__tel {
+  @include font-source(500, 24px, 1.166, 0.02em, var(--text-color));
+  transition: color var(--time-function) var(--timing-function);
 
   @media screen and (min-width: 480px) {
-    @include font-source(500, 34px, 1.172, 0.02em, var(--text-color));
+    @include font-source(500, 34px, 1.176, 0.02em, var(--text-color));
   }
 
   &:hover,
@@ -112,10 +124,9 @@
   }
 }
 
-.mobile-menu-mail__link {
+.mobile-contacts__mail {
   @include font-source(500, 24px, 1.166, 0.02em, var(--text-color));
   transition: color var(--time-function) var(--timing-function);
-  margin-bottom: 64px;
 
   &:hover,
   &:focus {
@@ -130,10 +141,6 @@
 }
 
 .mobile-menu-soclist__item {
-  &:not(:last-child) {
-    padding-bottom: 10px;
-  }
-
   @media screen and (min-width: 480px) {
     padding: 0 10px;
     border-left: 1px solid rgba(33, 33, 33, 0.2);
@@ -148,5 +155,14 @@
 }
 
 .mobile-menu-soclist__link {
+  display: inline-flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
   @include font-source(500, 18px, 1.222, 0.02em, var(--accent-color));
+
+  &:hover,
+  &:focus {
+    color: var(--header-color);
+    background-color: var(--secondary-background);
+  }
 }

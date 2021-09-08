@@ -33,12 +33,17 @@
 
 .choice-label {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-  @include font-source(400, 12px, 1.166, 0.03em, var(--text-color));
+  @include font-source(400, 10px, 1.166, 0.03em, var(--text-color));
   transition: text-shadow var(--time-function) var(--timing-function);
   cursor: pointer;
+
+  @media screen and (min-width: 340px) {
+    @include font-source(400, 12px, 1.166, 0.03em, var(--text-color));
+  }
 
   @media screen and (min-width: 1200px) {
     @include font-source(400, 14px, 1.71, 0.03em, var(--text-color));

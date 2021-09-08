@@ -6,21 +6,27 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  // display: flex;
-  // flex-direction: column;
-  // margin-left: auto;
-  // width: 570px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 0;
+    max-width: 570px;
+  }
 }
 
 .footer-form__text {
   margin-bottom: 20px;
   @include font-source(700, 14px, 1.142, 0.03em, var(--prime-color));
   text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .footer-form-group {
-  // display: flex;
-  // justify-content: flex-end;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .footer-form-group__input {
@@ -29,11 +35,14 @@
   @include indentation(15px, 16px);
   color: var(--prime-color);
   background-color: var(--prime-background);
-  // width: calc(100% - 212px);
 
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   cursor: pointer;
+
+  @media screen and (min-width: 1200px) {
+    width: calc(100% - 212px);
+  }
 }
 
 .footer-form-group__input::placeholder {
@@ -45,7 +54,10 @@
   margin-right: auto;
   @include centeredFlex();
   @include size(200px, 50px);
-  // margin-left: 12px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
 
   font-family: inherit;
   @include font-source(700, 16px, 1.87, 0.06em, var(--prime-color));
