@@ -1,6 +1,7 @@
 /* Секция команда */
 
 .team-section {
+  max-width: 1600px;
   @include indentation(60px, null);
   background-color: var(--secondary-background);
 
