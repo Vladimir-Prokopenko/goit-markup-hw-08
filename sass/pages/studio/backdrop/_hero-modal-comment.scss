@@ -32,7 +32,9 @@
 }
 
 .choice-label {
-  @include centeredFlex();
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
   @include font-source(400, 12px, 1.166, 0.03em, var(--text-color));
   transition: text-shadow var(--time-function) var(--timing-function);
