@@ -1,0 +1,17 @@
+// UTILS
+@import './utils/variables';
+@import './utils/_mixins';
+
+// BASE
+@import './base/_normalize';
+
+// PAGES
+@import './pages/webstudio';
+@import './pages/portfolio';
+@import './pages/contacts';
+
+// COMPONENTS
+@import './components/container';
+@import './components/header';
+@import './components/footer';
+@import './components/backdrop-hero';

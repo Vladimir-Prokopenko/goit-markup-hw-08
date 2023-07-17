@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- шапка сторінки сайту контакти -->
+    <header class="header-page">
+      <div class="container header-menu">
+        <nav class="header-nav">
+          <a class="header-logo" href="./index.html"
+            ><span class="header-logo-accent">Web</span>Studio</a
+          >
+          <ul class="header-list">
+            <li class="header-item">
+              <a class="header-link" href="./index.html">Студія</a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="header-item">
+              <a class="header-link current" href="./contacts.html">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="header-contacts">
+          <li class="header-contacts-item">
+            <a class="header-contacts-link" href="mailto:info@devstudio.com">
+              <div class="svg-icon-mail">
+                <svg>
+                  <use href="./images/icons.svg#icon-mail"></use>
+                </svg>
+              </div>
+              <p class="header-contacts-text">info@devstudio.com</p>
+            </a>
+          </li>
+          <li class="header-contacts-item">
+            <a class="header-contacts-link" href="tel:+380961111111">
+              <div class="svg-icon-phone">
+                <svg>
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+              </div>
+              <p class="header-contacts-text">+38 096 111 11 11</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="contacts-main">
+      <div class="container">
+        <h1 class="contacts-headihg">як нас знайти</h1>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.779449740656!2d30.5383858!3d50.426580699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf0e033ecbe9%3A0x57a4dffefec77da0!2z0LHRg9C7LiDQm9C10YHQuCDQo9C60YDQsNC40L3QutC4LCAyNiwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1680579888601!5m2!1sru!2sua"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </main>
+    <!-- футер сторінки сайту портфолио -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <address class="footer-address">
+          <a class="footer-logo" href="./index.html"
+            ><span class="footer-logo-accent">Web</span>Studio</a
+          >
+          <ul class="footer-list">
+            <li class="footer-item">
+              <a
+                class="footer-link-address"
+                href="https://goo.gl/maps/K3p8FaiJj2s5Bsjq5"
+                >м. Київ, пр-т Лесі Українки, 26</a
+              >
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="footer-item">
+              <a class="footer-link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </address>
+        <div class="footer-soc-wrap">
+          <p class="footer-soc-text"><b>приєднуйтесь</b></p>
+          <ul class="footer-soc-list">
+            <li class="footer-soc-item">
+              <a class="footer-soc-link" href="#">
+                <svg class="footer-soc-svg">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="footer-soc-item">
+              <a class="footer-soc-link" href="#">
+                <svg class="footer-soc-svg">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="footer-soc-item">
+              <a class="footer-soc-link" href="#">
+                <svg class="footer-soc-svg">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="footer-soc-item">
+              <a class="footer-soc-link" href="#">
+                <svg class="footer-soc-svg">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <ul></ul>
+        </div>
+        <div class="footer-subscribe">
+          <label class="footer-subscribe-label" for="input-subscribe">
+            <p class="footer-subscribe-text"><b>Підпишіться на розсилку</b></p>
+          </label>
+          <div class="footer-subscribe-wrap">
+            <input
+              class="input-subscribe"
+              id="input-subscribe"
+              type="text"
+              name="subscribe"
+              placeholder="E-mail"
+            />
+            <button class="footer-subscribe-btn" type="submit">
+              Підписатися
+              <svg class="subscribe-svg">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

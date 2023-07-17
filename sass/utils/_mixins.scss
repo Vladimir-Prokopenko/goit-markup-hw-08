@@ -1,0 +1,75 @@
+// Флекс позиціонування
+@mixin flex-position(
+  $display: flex,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+// Розмір блоку
+@mixin size($width, $height: $width, $radius: 0) {
+  width: $width;
+  height: $height;
+
+  @if $radius != 0 {
+    border-radius: $radius;
+  }
+}
+
+// Розмір шрифту
+@mixin font-size(
+  $font-size: false,
+  $line-height: false,
+  $letter-spacing: false,
+  $color: false
+) {
+  @if $font-size {
+    font-size: $font-size * 1px;
+  }
+
+  @if $line-height {
+    // line-height: $line-height / $font-size;
+    line-height: $line-height;
+  }
+
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing * 1px;
+  }
+
+  @if $color {
+    color: $color;
+  }
+}
+
+// Центрування фону
+@mixin cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+// Адаптування
+$tablet: 768;
+$large: 1024;
+$desktop: 1280;
+
+@mixin tablet {
+  @media only screen and (min-width: $tablet * 1px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: $large * 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop * 1px) {
+    @content;
+  }
+}

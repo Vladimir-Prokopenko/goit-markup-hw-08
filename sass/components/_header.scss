@@ -1,0 +1,130 @@
+/* шапка сторінки сайту */
+.header-page {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-menu {
+  display: flex;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-logo {
+  display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-right: 93px;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--dark-color-text);
+  transition: color var(--time-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.header-logo-accent {
+  color: var(--accent-color);
+}
+
+.header-logo:hover .header-logo-accent,
+.header-logo:focus .header-logo-accent {
+  color: var(--dark-color-text);
+}
+
+.header-list {
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+  gap: 50px;
+}
+
+.header-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--header-color);
+  transition: color var(--time-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.header-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity var(--time-duration) var(--timing-function);
+}
+
+.header-link.current::after {
+  opacity: 1;
+}
+
+.header-link.current {
+  color: var(--accent-color);
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 30px;
+}
+
+.header-contacts-item {
+  height: 100%;
+}
+
+.header-contacts-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: currentColor;
+  color: var(--color-text);
+  transition: color var(--time-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.svg-icon-mail {
+  display: flex;
+  margin-right: 10px;
+  width: 21px;
+  height: 16px;
+  object-fit: fill;
+}
+
+.svg-icon-phone {
+  display: flex;
+  margin-right: 10px;
+  width: 16px;
+  height: 22px;
+}
