@@ -1,17 +1,32 @@
 .portfolio-page {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .portfolio-filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  gap: 10px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio-button {
-  padding: 6px 22px;
+  padding: 6px 25px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -23,6 +38,10 @@
   transition: color var(--time-duration) var(--timing-function),
     background-color var(--time-duration) var(--timing-function),
     box-shadow var(--time-duration) var(--timing-function);
+
+  @media screen and (min-width: 768px) {
+    padding: 6px 22px;
+  }
 }
 
 .portfolio-button:hover,
@@ -35,16 +54,32 @@
 
 .portfolio-our-work {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .portfolio-item {
-  flex-basis: calc((100% - 60px) / 3);
+  width: 100%;
+  max-width: 450px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 370px;
+  }
 }
 
 .portfolio-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -87,6 +122,7 @@
 }
 
 .portfolio-thumb-content {
+  flex-grow: 1;
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;

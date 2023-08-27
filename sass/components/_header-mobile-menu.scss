@@ -1,0 +1,38 @@
+@media screen and (max-width: 767px) {
+  .header-menu {
+    display: none;
+  }
+}
+
+.header-mobile-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.header-mobile-menu-logo {
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 15px;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--dark-color-text);
+  transition: color var(--time-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.header-mobile-menu-logo-accent {
+  color: var(--accent-color);
+}
+.header-mobile-menu-button {
+}

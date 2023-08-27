@@ -1,17 +1,19 @@
 // UTILS
 @import './utils/variables';
-@import './utils/_mixins';
+@import './utils/placeholders';
+@import './utils/mixins';
 
 // BASE
 @import './base/_normalize';
 
-// PAGES
-@import './pages/webstudio';
-@import './pages/portfolio';
-@import './pages/contacts';
-
 // COMPONENTS
 @import './components/container';
+@import './components/_header-mobile-menu';
+@import './components/modal-mobile-menu';
 @import './components/header';
 @import './components/footer';
-@import './components/backdrop-hero';
+
+// PAGES
+@import './pages/webstudio';
+@import './pages/_portfolio';
+@import './pages/_contacts';
