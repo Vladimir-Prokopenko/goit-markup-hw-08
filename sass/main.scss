@@ -4,7 +4,7 @@
 @import './utils/mixins';
 
 // BASE
-@import './base/_normalize';
+@import './base/normalize';
 
 // COMPONENTS
 @import './components/container';
@@ -15,5 +15,5 @@
 
 // PAGES
 @import './pages/webstudio';
-@import './pages/_portfolio';
-@import './pages/_contacts';
+@import './pages/portfolio';
+@import './pages/contacts';
